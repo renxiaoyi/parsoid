@@ -46,7 +46,7 @@ exports.setup = function( parsoidConfig ) {
 
 	// Allow override of port/interface:
 	parsoidConfig.serverPort = 8080;
-	parsoidConfig.serverInterface = '127.0.0.1';
+	parsoidConfig.serverInterface = '0.0.0.0';
 
 	// The URL of your LintBridge API endpoint
 	//parsoidConfig.linterAPI = 'http://lintbridge.wmflabs.org/add';

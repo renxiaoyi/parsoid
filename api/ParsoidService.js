@@ -105,6 +105,17 @@ function ParsoidService( parsoidConfig, processLogger ) {
 	app.get(  '/v2/:domain/:format/:title/:revision?', v, p, routes.v2_get );
 	app.post( '/v2/:domain/:format/:title?/:revision?', v, p, routes.v2_post );
 
+    // AppEngine handlers
+    app.get('/_ah/health', function(req, res) {
+          res.send('ok', {'Content-Type': 'text/plain'}, 200);
+        });
+    app.get('/_ah/start', function(req, res) {
+          res.send('ok', {'Content-Type': 'text/plain'}, 200);
+        });
+    app.get('/_ah/stop', function(req, res) {
+          res.send('ok', {'Content-Type': 'text/plain'}, 200);
+          process.exit();
+        });
 
 	// Get host and port from the environment, if available
 	var port = parsoidConfig.serverPort || process.env.PORT || 8000;

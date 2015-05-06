@@ -6,8 +6,6 @@
 .deploy
 npm-debug.log
 
-
-api/localsettings.js
 api/nohup.out
 api/npm-debug.log
 lib/mediawiki.tokenizer.js
@@ -22,3 +20,6 @@ coverage/
 
 contrib/
 node_modules
+
+temp/
+*.back
