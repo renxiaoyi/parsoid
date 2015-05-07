@@ -6,17 +6,5 @@ manual_scaling:
   instances: 1
 
 handlers:
-- url: /(.*\.css)
-  static_files: api/static/css/\1
-  upload: api/static/css/(.*\.css)
-
-- url: /(.*\.js)
-  static_files: api/static/js/\1
-  upload: api/static/js/(.*\.js)
-
-- url: /(.*\.html)
-  static_files: api/views/\1
-  upload: api/views/(.*\.html)
-
 - url: /.*
   script: dynamic
